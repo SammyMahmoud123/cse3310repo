@@ -87,23 +87,25 @@ public class VendorLogin extends AppCompatActivity implements View.OnClickListen
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
 
+
+
                     if (task.isSuccessful()) {
                         FirebaseUser vendor = FirebaseAuth.getInstance().getCurrentUser();
-                        if(vendor.isEmailVerified()) {
+
                             //go to home page for vendor
                             Intent intent = new Intent(VendorLogin.this, VendorHomePage.class);
                             startActivity(intent);
                         }
                         else
                         {
-                            vendor.sendEmailVerification();
-                            Toast.makeText(VendorLogin.this, "A link to verify your account has been sent to your Email", Toast.LENGTH_LONG).show();
+
+                            Toast.makeText(VendorLogin.this, "Login Failed", Toast.LENGTH_SHORT).show();
                         }
 
 
-                    } else {
-                        Toast.makeText(VendorLogin.this, "Login Failed", Toast.LENGTH_LONG).show();
-                    }
+                    /*} else {
+                        Toast.makeText(VendorLogin.this, "Login Failed", Toast.LENGTH_LONG).show(); */
+                    //}
                 }
             });
         }

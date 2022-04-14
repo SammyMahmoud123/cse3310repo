@@ -9,13 +9,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="339dp"
-        android:layout_height="169dp"
+        android:layout_width="424dp"
+        android:layout_height="134dp"
         android:src="@drawable/androidlogo"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -30,18 +32,20 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.268" />
+        app:layout_constraintVertical_bias="0.234" />
 
     <EditText
         android:id="@+id/companyemail"
 
         android:layout_width="375dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="19dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Company Email Address"
+        android:imeOptions="actionNext"
         android:inputType="textEmailAddress"
-        android:textSize="24sp"
+        android:singleLine="true"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,16 +55,34 @@
         android:id="@+id/companypassword"
 
         android:layout_width="375dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Password"
+        android:imeOptions="actionDone"
         android:inputType="textPassword"
-        android:textSize="24sp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category" />
+
+    <EditText
+        android:id="@+id/category"
+
+        android:layout_width="375dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Category"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/companyAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/companyemail" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -97,28 +119,52 @@
 
 
         android:layout_width="375dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="19dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Company Phone Number"
+        android:imeOptions="actionNext"
         android:inputType="text|phone"
-        android:textSize="25dp"
+        android:singleLine="true"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/companyname" />
+
+    <EditText
+        android:id="@+id/companyAddress"
+
+
+        android:layout_width="375dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Address, zipcode, city"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyemail" />
 
     <EditText
         android:id="@+id/companyname"
 
 
         android:layout_width="375dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="26dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Company Name"
+        android:imeOptions="actionNext"
         android:inputType="textPersonName"
-        android:textSize="25dp"
+        android:singleLine="true"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -127,9 +173,10 @@
         android:layout_width="382dp"
         android:layout_height="62dp"
 
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="12dp"
         android:text="I understand that I will be charged a 20% fee for each booking  "
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/companypassword" />
 

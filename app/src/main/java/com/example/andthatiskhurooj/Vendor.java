@@ -1,15 +1,18 @@
 package com.example.andthatiskhurooj;
 
 public class Vendor {
-    public String companyName, companyEmail, companyPhone;
-    public int vendorID;
+    public String companyName, companyEmail, companyPhone, address,category;
     public Vendor(){}
-    public Vendor(String companyName, String companyEmail, String companyPhone, int vendorID)
+    public Vendor(String companyName, String companyEmail, String companyPhone, String address, String category)
     {
         this.companyName = companyName;
         this.companyEmail = companyEmail;
         this.companyPhone = companyPhone;
-        this.vendorID = vendorID;
+        this.address = address;
+        this.category = category;
+
+
+
 
 
     }

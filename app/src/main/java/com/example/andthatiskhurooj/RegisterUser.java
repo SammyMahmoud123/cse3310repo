@@ -89,6 +89,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String phoneNumber = editTextPhoneNumber.getText().toString().trim();
         String FullName = editTextFullName.getText().toString().trim();
+        int numberOfPointsAvailable = 0;
 
         if(FullName.isEmpty())
         {
@@ -139,13 +140,15 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                 if(task.isSuccessful())
                 {
 
-                    User u1 = new User(FullName, email, phoneNumber, userID);
+                    User u1 = new User(FullName, email, phoneNumber, numberOfPointsAvailable);
                     FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(u1).addOnCompleteListener(new OnCompleteListener<Void>() {
+
+
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful())
                             {
-                                Toast.makeText(RegisterUser.this, "User has been registered successfully",Toast.LENGTH_LONG).show();
+                                Toast.makeText(RegisterUser.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
 
                             }
